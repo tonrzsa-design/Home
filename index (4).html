@@ -3,14 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الموقع الإلكتروني - تصميم عصري وموثوق</title>
+    <title>الموقع الإلكتروني - المتجر الحديث</title>
     
     <style>
         /* =====================================
-         * الألوان والتصميم الحديث
+         * الألوان والتصميم الحديث (Modern Sea Theme)
          * ===================================== */
         :root {
-            /* درجات ألوان بحرية عصرية */
             --color-primary: #1E90FF;    /* DodgerBlue - أساسي */
             --color-secondary: #00BFFF;  /* DeepSkyBlue - ثانوي */
             --color-background: #F8F8FF; /* GhostWhite - خلفية فاتحة */
@@ -589,6 +588,13 @@
                 alert('الرجاء إدخال رقم المنتج.');
             }
         });
+
+        // تشغيل هذه الوظيفة عند تحميل الصفحة
+        if (sessionStorage.getItem('adminLoggedIn') === 'true') {
+            showAdmin();
+        } else {
+            showVisitor(); 
+        }
 
         updateStats(); 
     </script>
